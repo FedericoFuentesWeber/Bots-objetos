@@ -1,0 +1,16 @@
+import example.*
+
+program demo
+{
+	benito.listaNegra("algo")
+	
+	persona.nombreUsuario("eze")
+	persona.tweet("algo")
+	persona.tweet("alguien")
+	
+	console.println("es tweet negro: " + benito.tweetNegro(persona))
+	benito.reportar(persona)
+	
+	console.println("personas detenidas: " + policia.detenidos())
+	console.println("tweets a investigar: " + policia.tweetAInvestigar())
+}
