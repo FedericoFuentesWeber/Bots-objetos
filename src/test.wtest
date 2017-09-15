@@ -1,0 +1,13 @@
+import bots.*
+
+/*describe "Personas y sus tweets"
+{
+	var tweetN = new Tweet("eze", ["algo", "gato"])
+	var eze = new Persona(tweetN)
+}
+test "es tweet negro" {
+
+    benito.listaNegra("algo")
+	assert.that(benito.tweetNegro(eze.tweet()))
+
+}*/

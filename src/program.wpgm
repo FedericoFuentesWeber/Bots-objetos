@@ -1,16 +1,27 @@
-import example.*
+import bots.*
 
 program demo
 {
 	benito.listaNegra("algo")
+	benito.listaNegra("perro")
+	console.println("lista negra actual: " + benito.listaNegra())
 	
-	persona.nombreUsuario("eze")
-	persona.tweet("algo")
-	persona.tweet("alguien")
+	var tweetN = new Tweet("eze", ["algo", "gato"])
+	var tweetNu = new Tweet("fede", ["perro","alguien","as","ds","gf","as","as","as","as","as","as","as","as","as","as","as"])
+	var tweetNue = new Tweet("yami",["perro","gato"])
+	var eze = new Persona(tweetN)
+	var fede = new Persona(tweetNu)
+	var yami = new Persona(tweetNue)
 	
-	console.println("es tweet negro: " + benito.tweetNegro(persona))
-	benito.reportar(persona)
+	console.println("tweet de eze: " + eze.tweet())
+	console.println("es tweet negro: " + benito.tweetNegro(eze.tweet()))
 	
-	console.println("personas detenidas: " + policia.detenidos())
-	console.println("tweets a investigar: " + policia.tweetAInvestigar())
+	//benito.reportar(eze.tweet())
+	twitter.recibirTweet(eze.tweet())
+	
+	fede.twittear()
+	yami.twittear()
+	
+	console.println("personas detenidas: " + policia.usuariosReg())
+	console.println("tweets a investigar: " + policia.tweetReg())
 }
